@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Privacy Policy for Sankofa Royal Hotel in Obuasi"
+        />
+        <title>Privacy Policy - Sankofa Royal Hotel</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+
+        <style>
+            :root {
+                --red: #cc0000;
+                --blue: #000080;
+                --gold: #ffd700;
+                --white: #ffffff;
+                --light-gray: #f5f5f5;
+                --transition: all 0.3s ease;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Segoe UI", Arial, sans-serif;
+            }
+
+            body {
+                background-color: var(--light-gray);
+                color: var(--blue);
+                line-height: 1.6;
+            }
+
+            /* Header */
+            .header {
+                background-color: var(--blue);
+                color: var(--white);
+                padding: 1rem;
+                display: none;
+            }
+
+            /* Sidebar */
+            .sidebar {
+                width: 300px;
+                background: linear-gradient(to bottom, var(--blue), #000033);
+                color: var(--white);
+                padding: 2rem;
+                position: fixed;
+                height: 100vh;
+                overflow-y: auto;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+            }
+
+            .hotel-logo {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .hotel-logo img {
+                max-width: 180px;
+                height: auto;
+            }
+
+            .main-content {
+                margin-left: 300px;
+                padding: 2rem;
+            }
+
+            /* Policy Content */
+            .policy-section {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .policy-content {
+                background: var(--white);
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 2rem;
+            }
+
+            .policy-content h2 {
+                color: var(--blue);
+                margin: 2rem 0 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid var(--gold);
+            }
+
+            .policy-content p,
+            .policy-content ul {
+                margin-bottom: 1rem;
+                line-height: 1.8;
+            }
+
+            .policy-content ul {
+                margin-left: 2rem;
+            }
+
+            .policy-content a {
+                color: var(--blue);
+                text-decoration: none;
+            }
+
+            .policy-content a:hover {
+                text-decoration: underline;
+            }
+
+            /* Footer */
+            .footer {
+                background: var(--blue);
+                color: var(--white);
+                padding: 2rem;
+                text-align: center;
+                margin-top: 2rem;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 992px) {
+                .sidebar {
+                    width: 250px;
+                }
+                .main-content {
+                    margin-left: 250px;
+                }
+            }
+
+            @media (max-width: 768px) {
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .sidebar {
+                    width: 100%;
+                    position: relative;
+                    height: auto;
+                    display: none;
+                }
+                .sidebar.active {
+                    display: block;
+                }
+                .main-content {
+                    margin-left: 0;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Sankofa Royal Hotel</h1>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <aside class="sidebar">
+            <div class="hotel-logo">
+                <!-- Add your logo here if needed -->
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html"
+                            ><i class="fas fa-home"></i> Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            ><i class="fas fa-bed"></i> Rooms</a
+                        >
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            ><i class="fas fa-envelope"></i> Contact</a
+                        >
+                    </li>
+                    <li>
+                        <a href="terms.html"
+                            ><i class="fas fa-file-contract"></i> Terms of
+                            Stay</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="contact-info">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+233247681232">+233 247 681 232</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:sankofaroyalhotel@gmail.com"
+                        >sankofaroyalhotel@gmail.com</a
+                    >
+                </p>
+                <p><i class="fas fa-map-marker-alt"></i> Kyekyewere, Obuasi</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="policy-section">
+                <h1 class="section-title">Privacy Policy</h1>
+                <p><strong>Last Updated:</strong> June 2023</p>
+
+                <div class="policy-content">
+                    <h2>1. Information Collection</h2>
+                    <p>We collect personal information when you:</p>
+                    <ul>
+                        <li>Make a reservation or inquiry</li>
+                        <li>Contact our customer service</li>
+                        <li>Visit our website (through cookies)</li>
+                    </ul>
+                    <p>
+                        This may include: name, email, phone number, payment
+                        details (processed securely), and stay preferences.
+                    </p>
+
+                    <h2>2. Use of Information</h2>
+                    <p>Your data helps us to:</p>
+                    <ul>
+                        <li>Process bookings and payments</li>
+                        <li>Provide personalized service</li>
+                        <li>Improve our website and services</li>
+                        <li>Comply with legal requirements</li>
+                    </ul>
+
+                    <h2>3. Data Protection</h2>
+                    <p>We implement security measures including:</p>
+                    <ul>
+                        <li>SSL encryption for all data transfers</li>
+                        <li>
+                            Secure payment processing (no card details stored)
+                        </li>
+                        <li>Limited access to personal information</li>
+                    </ul>
+                    <p>
+                        We never sell or share your data with third parties for
+                        marketing purposes.
+                    </p>
+
+                    <h2>4. Your Rights</h2>
+                    <p>You have the right to:</p>
+                    <ul>
+                        <li>Access your personal data</li>
+                        <li>Request correction or deletion</li>
+                        <li>Opt-out of marketing communications</li>
+                        <li>Withdraw consent for data processing</li>
+                    </ul>
+
+                    <h2>5. Contact Us</h2>
+                    <p>
+                        For privacy concerns or data requests, contact our Data
+                        Protection Officer:
+                    </p>
+                    <p>
+                        Email:
+                        <a href="mailto:boansiisaac64@gmail.com"
+                            >boansiisaac64@gmail.com</a
+                        ><br />
+                        Phone: <a href="tel:+233247681232">+233 247 681 232</a>
+                    </p>
+                    <p>We respond to all requests within 7 business days.</p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sankofa Royal Hotel. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Privacy Policy</a> |
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+            </div>
+        </footer>
+
+        <script src="./javascript/main.js">
+           
+        </script>
+    </body>
+</html>
