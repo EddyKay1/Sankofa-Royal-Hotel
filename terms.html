@@ -1,233 +1,321 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terms of Stay at Sankofa Royal Hotel in Obuasi">
-    <title>Terms of Stay - Sankofa Royal Hotel</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    
-    <style>
-        :root {
-            --red: #cc0000;
-            --blue: #000080;
-            --gold: #FFD700;
-            --white: #ffffff;
-            --light-gray: #f5f5f5;
-            --transition: all 0.3s ease;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-
-        body {
-            background-color: var(--light-gray);
-            color: var(--blue);
-            line-height: 1.6;
-        }
-
-        /* Header */
-        .header {
-            background-color: var(--blue);
-            color: var(--white);
-            padding: 1rem;
-            display: none;
-        }
-
-        /* Sidebar */
-        .sidebar {
-            width: 300px;
-            background: linear-gradient(to bottom, var(--blue), #000033);
-            color: var(--white);
-            padding: 2rem;
-            position: fixed;
-            height: 100vh;
-            overflow-y: auto;
-            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-
-        .hotel-logo {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .hotel-logo img {
-            max-width: 180px;
-            height: auto;
-        }
-
-        .main-content {
-            margin-left: 300px;
-            padding: 2rem;
-        }
-
-        /* Terms Content */
-        .terms-section {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .terms-content {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            margin-top: 2rem;
-        }
-
-        .terms-content h2 {
-            color: var(--blue);
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--gold);
-        }
-
-        .terms-content p, .terms-content ul {
-            margin-bottom: 1rem;
-            line-height: 1.8;
-        }
-
-        .terms-content ul {
-            margin-left: 2rem;
-        }
-
-        .highlight {
-            color: var(--red);
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            background: var(--blue);
-            color: var(--white);
-            padding: 2rem;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .sidebar {
-                width: 250px;
+    <head>
+        <!-- Google tag (gtag.js) -->
+        <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-0XNYD3RXZH"
+        ></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
             }
-            .main-content {
-                margin-left: 250px;
-            }
-        }
+            gtag("js", new Date());
 
-        @media (max-width: 768px) {
+            gtag("config", "G-0XNYD3RXZH");
+        </script>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Terms of Stay at Sankofa Royal Hotel in Obuasi"
+        />
+        <title>Terms of Stay - Sankofa Royal Hotel</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+
+        <style>
+            :root {
+                --red: #cc0000;
+                --blue: #000080;
+                --gold: #ffd700;
+                --white: #ffffff;
+                --light-gray: #f5f5f5;
+                --transition: all 0.3s ease;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Segoe UI", Arial, sans-serif;
+            }
+
+            body {
+                background-color: var(--light-gray);
+                color: var(--blue);
+                line-height: 1.6;
+            }
+
+            /* Header */
             .header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-            .sidebar {
-                width: 100%;
-                position: relative;
-                height: auto;
+                background-color: var(--blue);
+                color: var(--white);
+                padding: 1rem;
                 display: none;
             }
-            .sidebar.active {
-                display: block;
+
+            /* Sidebar */
+            .sidebar {
+                width: 300px;
+                background: linear-gradient(to bottom, var(--blue), #000033);
+                color: var(--white);
+                padding: 2rem;
+                position: fixed;
+                height: 100vh;
+                overflow-y: auto;
+                box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
             }
+
+            .hotel-logo {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+
+            .hotel-logo img {
+                max-width: 180px;
+                height: auto;
+            }
+
             .main-content {
-                margin-left: 0;
+                margin-left: 300px;
+                padding: 2rem;
             }
-        }
-    </style>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
-<body>
-    <header class="header">
-        <h1>Sankofa Royal Hotel</h1>
-        <button class="menu-toggle">
-            <i class="fas fa-bars"></i>
-        </button>
-    </header>
 
-    <aside class="sidebar">
-        <div class="hotel-logo">
-            <!-- Add your logo here if needed -->
-        </div>
-        
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                <li><a href="index.html"><i class="fas fa-bed"></i> Rooms</a></li>
-                <li><a href="index.html"><i class="fas fa-envelope"></i> Contact</a></li>
-                <li><a href="privacy.html"><i class="fas fa-shield-alt"></i> Privacy Policy</a></li>
-            </ul>
-        </nav>
+            /* Terms Content */
+            .terms-section {
+                max-width: 900px;
+                margin: 0 auto;
+            }
 
-        <div class="contact-info">
-            <p><i class="fas fa-phone"></i> <a href="tel:+233247681232">+233 247 681 232</a></p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:sankofaroyalhotel@gmail.com">sankofaroyalhotel@gmail.com</a></p>
-            <p><i class="fas fa-map-marker-alt"></i> Kyekyewere, Obuasi</p>
-        </div>
-    </aside>
+            .terms-content {
+                background: var(--white);
+                padding: 2rem;
+                border-radius: 10px;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+                margin-top: 2rem;
+            }
 
-    <main class="main-content">
-        <section class="terms-section">
-            <h1 class="section-title">Terms of Stay</h1>
-            
-            <div class="terms-content">
-                <h2>1. Reservations & Payments</h2>
-                <ul>
-                    <li>All bookings require valid ID and credit card guarantee</li>
-                    <li>Check-in: 8:00 AM | Check-out: 12:00 PM</li>
-                    <li>Early check-in/late check-out subject to availability and additional charges</li>
-                    <li>We accept mobile money, and cash (GHS)</li>
-                </ul>
+            .terms-content h2 {
+                color: var(--blue);
+                margin: 2rem 0 1rem;
+                padding-bottom: 0.5rem;
+                border-bottom: 2px solid var(--gold);
+            }
 
-                <h2>2. Cancellation Policy</h2>
-                <ul>
-                    <li>Free cancellation up to <span class="highlight">48 hours</span> before arrival</li>
-                    <li>Late cancellations or no-shows incur charge of <span class="highlight">one night's stay</span></li>
-                    <li>Special event periods may have different cancellation terms</li>
-                </ul>
+            .terms-content p,
+            .terms-content ul {
+                margin-bottom: 1rem;
+                line-height: 1.8;
+            }
 
-                <h2>3. Hotel Policies</h2>
-                <ul>
-                    <li><span class="highlight">No smoking</span> in rooms (GH¢500 cleaning fee applies)</li>
-                    <li>Quiet hours: <span class="highlight">10:00 PM - 7:00 AM</span></li>
-                    <li>Visitors must register at reception and depart by 10:00 PM</li>
-                    <li>Damage to property will be charged to guest's account</li>
-                    <li>Lost key fee: GH¢50</li>
-                </ul>
+            .terms-content ul {
+                margin-left: 2rem;
+            }
 
-                <h2>4. Liability</h2>
-                <p>Sankofa Royal Hotel is not responsible for:</p>
-                <ul>
-                    <li>Lost, stolen, or damaged personal belongings</li>
-                    <li>Vehicles parked on premises (secured parking available)</li>
-                    <li>Injuries occurring on property outside our reasonable control</li>
-                </ul>
-                <p>Safe deposit boxes are available at reception.</p>
+            .highlight {
+                color: var(--red);
+                font-weight: bold;
+            }
 
-                <h2>5. Governing Law</h2>
-                <p>These terms are governed by Ghanaian law. Any disputes shall be settled in Obuasi courts.</p>
+            /* Footer */
+            .footer {
+                background: var(--blue);
+                color: var(--white);
+                padding: 2rem;
+                text-align: center;
+                margin-top: 2rem;
+            }
 
-                <h2>6. Changes to Terms</h2>
-                <p>We reserve the right to modify these terms. Current version always available on our website.</p>
+            /* Responsive Design */
+            @media (max-width: 992px) {
+                .sidebar {
+                    width: 250px;
+                }
+                .main-content {
+                    margin-left: 250px;
+                }
+            }
 
-                <p>By making a reservation, you agree to these Terms of Stay.</p>
+            @media (max-width: 768px) {
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .sidebar {
+                    width: 100%;
+                    position: relative;
+                    height: auto;
+                    display: none;
+                }
+                .sidebar.active {
+                    display: block;
+                }
+                .main-content {
+                    margin-left: 0;
+                }
+            }
+        </style>
+        <link rel="stylesheet" href="./styles/main.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Sankofa Royal Hotel</h1>
+            <button class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+
+        <aside class="sidebar">
+            <div class="hotel-logo">
+                <!-- Add your logo here if needed -->
             </div>
-        </section>
-    </main>
 
-    <footer class="footer">
-        <p>&copy; 2025 Sankofa Royal Hotel. All Rights Reserved.</p>
-        <div class="footer-links">
-            <a href="privacy.html" class="footer-link">Privacy Policy</a> |
-            <a href="terms.html" class="footer-link">Terms of Service</a>
-        </div>
-    </footer>
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <a href="index.html"
+                            ><i class="fas fa-home"></i> Home</a
+                        >
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            ><i class="fas fa-bed"></i> Rooms</a
+                        >
+                    </li>
+                    <li>
+                        <a href="index.html"
+                            ><i class="fas fa-envelope"></i> Contact</a
+                        >
+                    </li>
+                    <li>
+                        <a href="privacy.html"
+                            ><i class="fas fa-shield-alt"></i> Privacy Policy</a
+                        >
+                    </li>
+                </ul>
+            </nav>
 
-    <script src="./javascript/main.js"></script>
-</body>
+            <div class="contact-info">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+233247681232">+233 247 681 232</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:sankofaroyalhotel@gmail.com"
+                        >sankofaroyalhotel@gmail.com</a
+                    >
+                </p>
+                <p><i class="fas fa-map-marker-alt"></i> Kyekyewere, Obuasi</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="terms-section">
+                <h1 class="section-title">Terms of Stay</h1>
+
+                <div class="terms-content">
+                    <h2>1. Reservations & Payments</h2>
+                    <ul>
+                        <li>
+                            All bookings require valid ID and credit card
+                            guarantee
+                        </li>
+                        <li>Check-in: 8:00 AM | Check-out: 12:00 PM</li>
+                        <li>
+                            Early check-in/late check-out subject to
+                            availability and additional charges
+                        </li>
+                        <li>We accept mobile money, and cash (GHS)</li>
+                    </ul>
+
+                    <h2>2. Cancellation Policy</h2>
+                    <ul>
+                        <li>
+                            Free cancellation up to
+                            <span class="highlight">48 hours</span> before
+                            arrival
+                        </li>
+                        <li>
+                            Late cancellations or no-shows incur charge of
+                            <span class="highlight">one night's stay</span>
+                        </li>
+                        <li>
+                            Special event periods may have different
+                            cancellation terms
+                        </li>
+                    </ul>
+
+                    <h2>3. Hotel Policies</h2>
+                    <ul>
+                        <li>
+                            <span class="highlight">No smoking</span> in rooms
+                            (GH¢500 cleaning fee applies)
+                        </li>
+                        <li>
+                            Quiet hours:
+                            <span class="highlight">10:00 PM - 7:00 AM</span>
+                        </li>
+                        <li>
+                            Visitors must register at reception and depart by
+                            10:00 PM
+                        </li>
+                        <li>
+                            Damage to property will be charged to guest's
+                            account
+                        </li>
+                        <li>Lost key fee: GH¢50</li>
+                    </ul>
+
+                    <h2>4. Liability</h2>
+                    <p>Sankofa Royal Hotel is not responsible for:</p>
+                    <ul>
+                        <li>Lost, stolen, or damaged personal belongings</li>
+                        <li>
+                            Vehicles parked on premises (secured parking
+                            available)
+                        </li>
+                        <li>
+                            Injuries occurring on property outside our
+                            reasonable control
+                        </li>
+                    </ul>
+                    <p>Safe deposit boxes are available at reception.</p>
+
+                    <h2>5. Governing Law</h2>
+                    <p>
+                        These terms are governed by Ghanaian law. Any disputes
+                        shall be settled in Obuasi courts.
+                    </p>
+
+                    <h2>6. Changes to Terms</h2>
+                    <p>
+                        We reserve the right to modify these terms. Current
+                        version always available on our website.
+                    </p>
+
+                    <p>
+                        By making a reservation, you agree to these Terms of
+                        Stay.
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Sankofa Royal Hotel. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="privacy.html" class="footer-link">Privacy Policy</a> |
+                <a href="terms.html" class="footer-link">Terms of Service</a>
+            </div>
+        </footer>
+
+        <script src="./javascript/main.js"></script>
+    </body>
 </html>
