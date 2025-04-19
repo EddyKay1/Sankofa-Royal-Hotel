@@ -63,12 +63,13 @@ body {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
         url("san.jpg") center/cover no-repeat;
-    height: 70vh;
+    /* height: 70vh; */
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     margin-bottom: 2rem;
+    margin-top: auto;
     animation: fadeIn 1s ease-in-out;
 }
 
@@ -460,6 +461,7 @@ body {
 
     .main-content {
         margin-left: 0;
+        padding: 1rem;
     }
 
     .menu-toggle {
@@ -471,7 +473,9 @@ body {
     }
 
     .hero {
-        height: 50vh;
+        /* height: 50vh; */
+        padding: 0.5rem;
+        margin-top: 70px;
     }
 
     .hero h1 {
